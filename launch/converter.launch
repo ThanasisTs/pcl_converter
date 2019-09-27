@@ -1,0 +1,9 @@
+<launch> 
+	<arg name="fileName" default="file"/>
+	<arg name="topic" default="file"/>
+
+	<node name="converter" pkg="converter" type="converter" respawn="false" output="screen">
+		<param name="fileName" value="$(arg fileName)" />
+		<param name="topic" value="$(arg topic)" />
+	</node>
+</launch>
